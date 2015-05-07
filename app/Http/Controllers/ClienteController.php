@@ -16,6 +16,8 @@ class ClienteController extends Controller {
 	public function index()
 	{
 		//
+		$clientes = Cliente::all();
+		return view('clientes.index',compact('clientes'));
 	}
 
 	/**
@@ -49,7 +51,9 @@ class ClienteController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$cliente= Cliente::find($id);
+		return view('clientes.show',compact('cliente'));
+
 	}
 
 	/**
@@ -60,7 +64,9 @@ class ClienteController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		
+		$cliente = Cliente::find($id);
+		return view('clientes.edit',compact('cliente'));
 	}
 
 	/**
