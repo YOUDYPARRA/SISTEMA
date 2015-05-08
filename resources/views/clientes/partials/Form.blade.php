@@ -1,5 +1,10 @@
+
+	<div class='form-group'>
+		{!!Form::text('txtFecha',null,['id'=>'txtFecha','class'=>'form-control floating-label','placeholder'=>'FECHA'])!!}
+	</div>
 <div class='col-sm-6'>
 	
+
 	<div class='form-group'>
 		{!!Form::text('nombre',null,['class'=>'form-control floating-label','placeholder'=>'NOMBRE'])!!}
 	</div>
@@ -15,8 +20,10 @@
 	<div class='form-group'>
 		{!!Form::text('poblacion',null,['class'=>'form-control floating-label','placeholder'=>'POBLACION'])!!}
 	</div>
+
 </div>
 <div class='col-sm-6'>
+
 	<div class='form-group'>
 		{!!Form::text('codigo_postal',null,['class'=>'form-control floating-label','placeholder'=>'CODIGO POSTAL'])!!}
 	</div>
@@ -33,4 +40,5 @@
 	<div class='form-group'>
 		{!!Form::text('correo',null,['class'=>'form-control floating-label','placeholder'=>'CORREO'])!!}
 	</div>
+	
 </div>

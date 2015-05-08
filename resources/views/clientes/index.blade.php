@@ -2,7 +2,7 @@
 
 @section('content')
 <div class='panel panel-default'>
-
+<a class='btn btn-success btn-xs' href="/clientes/create">AGREGAR NUEVO</a>
 	<div class='panel-heading'>LISTADO CLIENTES</div>
 
 	<table class='table table-responsive table-bordered'>

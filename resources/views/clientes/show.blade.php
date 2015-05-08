@@ -1,3 +1,4 @@
+
 <h3>DATOS DE CLIENTE</h3>
 
 <h1>{{ $cliente->nombre}}</h1>
