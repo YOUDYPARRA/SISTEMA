@@ -75,7 +75,7 @@ class ClienteController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, $request)
+	public function update($id, Request $request)
 	{
 		$cliente = Cliente::find($id);
 		$cliente->update($request->all());
@@ -90,7 +90,9 @@ class ClienteController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$cliente = Cliente::find($id);
+		$cliente->delete();
+		return redirect('clientes');
 	}
 
 }
