@@ -75,9 +75,11 @@ class ClienteController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, $request)
 	{
-		//
+		$cliente = Cliente::find($id);
+		$cliente->update($request->all());
+		return redirect('clientes');
 	}
 
 	/**
