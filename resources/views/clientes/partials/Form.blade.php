@@ -1,6 +1,6 @@
 
 	<div class='form-group'>
-		{!!Form::text('txtFecha',null,['id'=>'txtFecha','class'=>'form-control floating-label','placeholder'=>'FECHA'])!!}
+		{!!Form::text('txtFecha',null,['id'=>'txtFecha','class'=>'','placeholder'=>'FECHA'])!!}
 	</div>
 <div class='col-sm-6'>
 	

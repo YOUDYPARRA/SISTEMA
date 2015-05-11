@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@section('title')Sistemas @show</title>
 	{!! Html::style('bower_components/bootstrap/dist/css/bootstrap.css')!!}
+	{!! Html::style('bower_components/jquery/src/css/jquery-ui.css')!!}
 	{!! Html::style('bower_components/bootstrap-material-design/dist/css/material.min.css')!!}
 	{!! Html::style('bower_components/bootstrap-material-design/dist/css/ripples.min.css')!!}
 
@@ -65,6 +66,7 @@
 
 </div>
 {!!Html::script('bower_components/jquery/dist/jquery.min.js')!!}
+{!!Html::script('bower_components/jquery/dist/jquery-ui.min.js')!!}
 {!!Html::script('bower_components/bootstrap-material-design/dist/js/ripples.min.js')!!}
 {!!Html::script('bower_components/bootstrap-material-design/dist/js/material.min.js')!!}
 	<!-- Scripts -->
@@ -72,7 +74,15 @@
 	$(document).on('ready',function(){
 		$.material.init();
 		$("#txtFecha").datepicker();
-	});
+		$("#txtFecha").click(function(){
+			$.ajax('http://sistema/robots.txt',{
+				cache:false,
+				success:function(rsp){
+					console.log(rsp);
+				}
+			});
+		});
+	});jQuery()
 	</script>
 	
 </body>
