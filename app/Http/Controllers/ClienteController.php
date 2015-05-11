@@ -13,10 +13,10 @@ class ClienteController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		//
-		$clientes = Cliente::all();
+		
+		$clientes = Cliente::nombre($request->get('nombre'))->telefono($request->get('telefono'))->paginate(2);
 		return view('clientes.index',compact('clientes'));
 	}
 
