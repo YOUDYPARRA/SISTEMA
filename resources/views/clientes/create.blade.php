@@ -7,6 +7,7 @@
 
 
 @include('clientes.partials.Form')
+
 <div class='form-group'>
 
 	{!! Form::button('Generar',['type'=>'submit','class'=>'btn btn-primary'])!!}
